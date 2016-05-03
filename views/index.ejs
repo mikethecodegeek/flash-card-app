@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular</title>
+    <script src="/bower_components/angular/angular.min.js"></script>
+    <script src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="/javascripts/module.js"></script>
+    <script src="/javascripts/controller.js"></script>
+    <script src="/javascripts/services.js"></script>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+
+</head>
+<body ng-app='angularApp'>
+
+<button ui-sref='home'>Card Manager</button>
+<button ui-sref='state2'>Test Yourself!!</button>
+<button ui-sref='state1'>Make a New Card</button>
+
+
+<h1>Flash-Card Game</h1>
+<div class="container">
+    <ui-view></ui-view>
+</div>
+</body>
+</html>
