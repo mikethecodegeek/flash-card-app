@@ -5,12 +5,11 @@
 
 var app = angular.module('angularApp');
 
-app.service('myService',function($http, $q) {
+app.service('myService',function($http) {
     this.getAll = () => {
         return $http.get('./api/cards');
     };
     this.create = newPost => {
-   //     console.log(newPost);
         return $http.post('./api/cards', {question: newPost.question, answer: newPost.answer,
             category: newPost.category});
     };
@@ -21,7 +20,6 @@ app.service('myService',function($http, $q) {
         return $http.get(`./api/cards/${id}`);
     };
     this.editById = (id, newData) => {
-        console.log(newData);
         return $http.put(`./api/cards/${id}`, {id: id, question: newData.question,
         answer: newData.answer, category: newData.category});
     }

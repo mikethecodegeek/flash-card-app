@@ -12,7 +12,6 @@ app.controller('homeCtrl', function(myService, $scope, $state) {
     $scope.editing = false;
     myService.getAll()
         .then(stuff => {
-         //   console.log(stuff);
             $scope.apiData = stuff;
         });
     $scope.editItem = function(item, itemData) {
@@ -54,7 +53,6 @@ app.controller('state1Ctrl', function(myService, $scope, $state) {
             answer: $scope.newAnswer,
             category: $scope.newCategory
         };
-      //  console.log($scope);
         myService.create(newData)
             .then($state.go('home'));
 
@@ -63,16 +61,13 @@ app.controller('state1Ctrl', function(myService, $scope, $state) {
 });
 
 app.controller('state2Ctrl', function(myService, $scope, $state) {
-  //  console.log('state2Ctrl');
     console.log($state);
     $scope.questions=[];
     $scope.currentQuestion = {};
     $scope.answer = false;
     myService.getByCategory($state.params.category)
         .then(stuff => {
-           // console.log(stuff.data);
             $scope.questions = stuff.data;
-           // console.log($scope.questions);
             pickCard();
 
         });
@@ -83,11 +78,9 @@ app.controller('state2Ctrl', function(myService, $scope, $state) {
         if (randCard <0) {
             randCard =0;
         }
-       // console.log('Number:' + randCard);
         $scope.currentQuestion.question = $scope.questions[randCard].question;
         $scope.currentQuestion.answer = $scope.questions[randCard].answer;
         $scope.currentQuestion.category = $scope.questions[randCard].category;
-       // console.log($scope.currentQuestion);
     }
     $scope.answerQuestion = function() {
         $scope.answer = true;
