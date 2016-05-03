@@ -17,7 +17,7 @@ app.service('myService',function($http, $q) {
     this.deleteById = id => {
         return $http.delete(`./api/cards/${id}`);
     };
-    this.getById = id => {
+    this.getByCategory = id => {
         return $http.get(`./api/cards/${id}`);
     };
     this.editById = (id, newData) => {

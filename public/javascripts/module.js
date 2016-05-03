@@ -28,7 +28,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
             controller: 'state1Ctrl'
         })
         .state('state2', {
-            url: '/state2/',
+            url: '/state2/:category',
             templateUrl: '/html/game.html',
             controller: 'state2Ctrl'
         })

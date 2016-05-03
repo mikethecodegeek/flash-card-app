@@ -57,12 +57,13 @@ app.controller('state1Ctrl', function(myService, $scope, $state) {
 
 });
 
-app.controller('state2Ctrl', function(myService, $scope) {
+app.controller('state2Ctrl', function(myService, $scope, $state) {
   //  console.log('state2Ctrl');
+    console.log($state);
     $scope.questions=[];
     $scope.currentQuestion = {};
     $scope.answer = false;
-    myService.getAll()
+    myService.getByCategory($state.params.category)
         .then(stuff => {
            // console.log(stuff.data);
             $scope.questions = stuff.data;

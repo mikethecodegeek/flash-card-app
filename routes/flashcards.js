@@ -33,7 +33,8 @@ router.post('/', (req,res)=> {
 });
 
 router.get('/:id', (req,res)=> {
-    FlashCard.findById(req.params.id, (err,data) => {
+    //console.log(req.params);
+    FlashCard.find({category:req.params.id}, (err,data) => {
         if (err) {
             console.log(err);
         }
@@ -42,6 +43,7 @@ router.get('/:id', (req,res)=> {
         }
     })
 });
+
 
 router.delete('/:id', (req,res)=> {
     FlashCard.findByIdAndRemove(req.params.id, (err,data)=> {
