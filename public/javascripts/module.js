@@ -17,6 +17,12 @@ app.config(function($stateProvider, $urlRouterProvider) {
                 }
             }
         })
+        .state('splash', {
+            url: '/',
+            templateUrl: '/html/splash.html',
+            controller: 'splashCtrl'
+            
+        })
         .state('delete', {
             url: '/delete/:id',
             templateUrl: '/html/home.html',

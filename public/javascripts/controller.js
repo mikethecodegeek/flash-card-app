@@ -4,6 +4,10 @@
 'use strict';
 var app = angular.module('angularApp');
 
+app.controller('splashCtrl', function(myService, $scope, $state) {
+    //console.log($state.params);
+
+});
 app.controller('homeCtrl', function(myService, $scope, $state) {
     $scope.editing = false;
     myService.getAll()
@@ -42,6 +46,7 @@ app.controller('deleteCtrl', function(myService, $scope, $state) {
         .then($state.go('home'));
 
 });
+
 app.controller('state1Ctrl', function(myService, $scope, $state) {
     $scope.newPost = function(){
         var newData = {
@@ -49,7 +54,7 @@ app.controller('state1Ctrl', function(myService, $scope, $state) {
             answer: $scope.newAnswer,
             category: $scope.newCategory
         };
-        console.log(newData);
+      //  console.log($scope);
         myService.create(newData)
             .then($state.go('home'));
 

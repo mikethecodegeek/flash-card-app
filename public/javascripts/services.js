@@ -10,7 +10,7 @@ app.service('myService',function($http, $q) {
         return $http.get('./api/cards');
     };
     this.create = newPost => {
-        console.log(newPost);
+   //     console.log(newPost);
         return $http.post('./api/cards', {question: newPost.question, answer: newPost.answer,
             category: newPost.category});
     };
