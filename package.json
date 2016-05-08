@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "npm start"
+    "start": "node ./bin/www"
   },
   "engines": {
     "node": "5.10.1"
@@ -23,5 +23,13 @@
   "devDependencies": {},
   "author": "",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikethecodegeek/flash-card-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mikethecodegeek/flash-card-app/issues"
+  },
+  "homepage": "https://github.com/mikethecodegeek/flash-card-app#readme",
   "description": ""
 }

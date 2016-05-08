@@ -7,7 +7,14 @@ var app = angular.module('angularApp', ['ui.router']);
 app.config(function($stateProvider, $urlRouterProvider) {
 
     $stateProvider
-        .state('home', {
+
+        .state('splash', {
+            url: '/',
+            templateUrl: '/html/splash.html',
+            controller: 'splashCtrl'
+            
+        })
+        .state('cards', {
             url: '/',
             templateUrl: '/html/home.html',
             controller: 'homeCtrl',
@@ -16,12 +23,6 @@ app.config(function($stateProvider, $urlRouterProvider) {
                     return myService.getAll();
                 }
             }
-        })
-        .state('splash', {
-            url: '/',
-            templateUrl: '/html/splash.html',
-            controller: 'splashCtrl'
-            
         })
         .state('delete', {
             url: '/delete/:id',
