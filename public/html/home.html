@@ -1,5 +1,10 @@
 <h1>Manage Flash Cards</h1>
-
+<div ng-show="editing">
+    <input type="text" ng-model="editQuestion">
+    <input type="text" ng-model="editAnswer">
+    <input type="text" ng-model="editCategory">
+    <button ng-click="postEdit()">Confirm Edit</button>
+</div>
 <ul ng-repeat = 'items in apiData.data'>
         <li>Question: {{items.question}} </li>
         <li>Answer: {{items.answer}} </li>
@@ -8,11 +13,6 @@
         <button ng-click = 'editItem(items)'>Edit Item</button>
     </li>
 </ul>
-<div ng-show="editing">
-    <input type="text" ng-model="editQuestion">
-    <input type="text" ng-model="editAnswer">
-    <input type="text" ng-model="editCategory">
-    <button ng-click="postEdit()">Confirm Edit</button>
-</div>
+
 
 </div>
