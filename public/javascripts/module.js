@@ -15,7 +15,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
             
         })
         .state('cards', {
-            url: '/',
+            url: '/home',
             templateUrl: '/html/home.html',
             controller: 'homeCtrl',
             resolve: {
