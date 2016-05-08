@@ -42,7 +42,7 @@ app.controller('homeCtrl', function(myService, $scope, $state) {
 app.controller('deleteCtrl', function(myService, $scope, $state) {
     //console.log($state.params);
     myService.deleteById($state.params.id)
-        .then($state.go('home'));
+        .then($state.go('cards'));
 
 });
 
@@ -54,7 +54,7 @@ app.controller('state1Ctrl', function(myService, $scope, $state) {
             category: $scope.newCategory
         };
         myService.create(newData)
-            .then($state.go('home'));
+            .then($state.go('cards'));
 
     }
 
