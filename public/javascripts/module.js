@@ -14,7 +14,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
             controller: 'splashCtrl'
             
         })
-        .state('cards', {
+        .state('home', {
             url: '/home',
             templateUrl: '/html/home.html',
             controller: 'homeCtrl',
